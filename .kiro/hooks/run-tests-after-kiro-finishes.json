@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Run tests after Kiro finishes",
+      "trigger": "Stop",
+      "action": {
+        "type": "command",
+        "command": "npm test -- --run --passWithNoTests"
+      },
+      "description": "Runs the unit and property-based tests every time Kiro finishes a turn, so broken code is caught immediately. The test output is fed back to Kiro.",
+      "enabled": true
+    }
+  ]
+}
